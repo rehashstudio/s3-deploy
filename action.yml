@@ -1,5 +1,5 @@
-name: 'S3 Deploy'
-description: 'Deploy a static website to AWS S3 and invalidate CloudFront distribution'
+name: 'S3 and Cloudfront Deploy'
+description: 'Deploy a static website to AWS S3 and invalidate CloudFront distribution path(s)'
 inputs:
   folder:
     description: 'Directory to deploy'
@@ -9,6 +9,9 @@ inputs:
     required: true
   dist-id:
     description: 'AWS CloudFront distribution ID'
+    required: true
+  invalidation:
+    description: 'AWS CloudFront invalidation path(s)'
     required: true
 runs:
   using: 'node12'
