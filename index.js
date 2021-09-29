@@ -5,10 +5,10 @@ async function run() {
   try {
     const folder = getInput('folder');
     const bucket = getInput('bucket');
-    const distId = getInput('dist-id');
+    const distIds = getInput('dist-ids');
     const invalidation = getInput('invalidation');
 
-    await deploy(folder, bucket, distId, invalidation);
+    await deploy(folder, bucket, distIds, invalidation);
   }
   catch (error) {
     setFailed(error.message);
